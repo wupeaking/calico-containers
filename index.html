@@ -2,6 +2,26 @@
 layout: default
 title: 我的Blog
 ---
+<div class="row">
+   <div class="col-lg-4">
+     	<h2 class="page-header">文章列表</h2>
+          
+       	<ul class="text-primary">
+		{% for post in site.posts %}
+		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+   </div>
+   <div class="col-lg-8">
+        <h2 class="page-header">文章内容</h2>
+     	<p class="text-primay">
+		待续
+	</p>         
+      
+   </div>   
+</div>
+
+
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
 <ul>
